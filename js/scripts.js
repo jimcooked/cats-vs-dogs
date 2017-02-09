@@ -1,10 +1,16 @@
 $(document).ready(function() {
-  $("img#cat").click(function() {
-    $("ul#feline").prepend("<li>Meow!</li>");
+  $("h2#cat").click(function() {
+    $("#feline").append("<img src='img/cats-master-header.png'>");
+    $("#feline").children("img").click(function() {
+      $(this).remove();
+    });
   });
 
-  $("img#dog").click(function() {
-    $("ul#canine").prepend("<li>Woof!</li>");
+  $("h2#dog").click(function() {
+    $("#canine").append("<img src='img/hqdefault.jpg'>");
+    $("#canine").children("img").click(function() {
+      $(this).remove();
+    });
   });
 
 });
